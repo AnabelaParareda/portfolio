@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#inicio{
+    background: linear-gradient(#000000b3, #000000b3), url("img/fondo.jpeg");
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+#inicio .contenido header{
+    background-color: #000000b3;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+#inicio .contenido header .contenido-header{
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+}
+
+#inicio .contenido header .contenido-header h1{
+    text-align: center;
+    color: #8035b5;
+}
+
+#inicio .contenido header .contenido-header nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+#inicio .contenido header .contenido-header nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    margin: 0 12px;
+    font-weight: 400;
+    transition: .5s;
+}
+
+#inicio .contenido header .contenido-header nav ul a:hover{
+    color: #8035b5;
+}
+
+#inicio .contenido header .contenido-header .redes a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #8035b5;
+    display: inline-block;
+    transition: .5s;
+}
+
+ #inicio .contenido header .contenido-header .redes a:hover{
+     color: #ffffff;
+ }
+
+ #inicio .contenido header .contenido-header .seleccionado{
+     color: #8035b5;
+ }
+
+#inicio .contenido .presentacion{
+    max-width: 1200px; 
+    height: 110vh;
+    margin: auto;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#inicio .contenido .presentacion .bienvenida{
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+#inicio .contenido .presentacion h2{
+    font-size: 40px;
+    margin-bottom: 25px;
+    text-align: center;
+
+}
+
+#inicio .contenido .presentacion h2 span{
+    color: #8035b5;
+}
+
+#inicio .contenido .presentacion .descripcion{
+    max-width: 700px;
+    margin: 25px auto;
+    font-size: 18px;
+    text-align: center;
+}
+
+#inicio .contenido .presentacion a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 35px;
+    padding: 20px 20px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+#inicio .contenido .presentacion a:hover{
+    background-color: #8035b5;
+}
+
+#sobremi{
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 15px;
+    color: #000000;
+    display: flex;
+}
+
+#sobremi .contenedor-foto{
+    max-width: 400px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#sobremi .contenedor-foto img{
+    padding: 15px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #faf0ff;
+}
+
+#sobremi .sobremi{
+    margin: 15px;
+}
+
+#sobremi .sobremi .titulo-seccion{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #8035b5;
+}
+
+#sobremi .sobremi h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 30px 0;
+    letter-spacing: 2px;
+}
+
+#sobremi .sobremi h2 span{
+    color:#8035b5
+}
+
+#sobremi .sobremi h3{
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+#sobremi .sobremi p{
+    font-size: 14px;
+    line-height: 25px;
+    color: #000000;
+}
+
+#sobremi .sobremi a{
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: 1px solid #000000;
+    margin-top: 30px;
+    transition: .5s;
+}
+
+#sobremi .sobremi a:hover{
+    background-color: #8035b5;
+    color: #fff;
+}
