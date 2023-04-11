@@ -3,7 +3,7 @@
 }
 
 :root{
-    --bg-color: #1c1b1b;
+    --bg-color: #b0d9f0;
     --text-color: #ffffff;
     font-size: 18px;
 }
@@ -15,7 +15,7 @@ body{
 }
 
 a{
-    color: var(--text-color);
+    color: #000000;
 }
 
 p{
@@ -27,7 +27,7 @@ footer{
     position: fixed;
     bottom: 0;
     padding: 20px 0px;
-    border-top: 1px solid #ffffff;
+    border-top: 1px solid var(--text-color);
     width: 100%;
     text-align: center;
 }
@@ -53,4 +53,10 @@ footer{
 
 .search:focus{
     outline: none;
+}
+
+nav{
+    padding: 0px 20px;
+    color: var(--text-color);
+    font-size: 1rem;
 }
