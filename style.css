@@ -1,0 +1,56 @@
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+:root{
+    --bg-color: #1c1b1b;
+    --text-color: #ffffff;
+    font-size: 18px;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+a{
+    color: var(--text-color);
+}
+
+p{
+    margin-bottom: 0.50rem;
+    line-height: 1rem;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    padding: 20px 0px;
+    border-top: 1px solid #ffffff;
+    width: 100%;
+    text-align: center;
+}
+
+.search-form{
+    margin: 20px 20px;
+}
+
+.searchbox{
+    padding: 10px 20px;
+    background-color: var(--text-color);
+    max-width: 480px;
+    margin: 0px auto;
+    border-radius: 5px;
+}
+
+.search{
+    width: 100%;
+    background-color: var(--text-color);
+    border: none;
+    font-size: 1rem;
+}
+
+.search:focus{
+    outline: none;
+}
