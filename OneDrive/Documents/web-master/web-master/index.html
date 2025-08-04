@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/ico2.ico">
+    <title>Anna Developer</title>
+    <script defer src="validate.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('UErM2MVrTmiS3P7K8');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contactForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+                const nombre = event.srcElement[0].value
+                const email = event.srcElement[1].value
+                const mensaje = event.srcElement[2].value
+                const emailRegex = /\S+@\S+\.\S+/;
+
+                if (nombre.trim() === '') {
+                    alert('Please enter your name');
+                    return;
+                }
+
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address');
+                    return;
+                }
+
+                if (mensaje.trim() === '') {
+                    alert('Please enter a message');
+                    return;
+                }
+
+                alert('El formulario se ha enviado correctamente');
+                form.reset();
+                emailjs.sendForm('service_ykwqthv', 'contactForm19', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                        document.getElementById('contactForm').reset();
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <!-- HOME SECTION -->
+    <section id="home">
+        <div class="content">
+            <header>
+                <div class="content-header">
+                    <h1>AP</h1>
+                    <nav id="nav" class="">
+                        <ul id="links">
+                            <li><a href="#home" onclick="select(this)">HOME</a></li>
+                            <li><a href="#aboutme" onclick="select(this)">ABOUT ME</a></li>
+                            <li><a href="#myskills" onclick="select(this)">SKILLS</a></li>
+                            <li><a href="#projects" onclick="select(this)">PROJECTS</a></li>
+                            <li><a href="#contact" onclick="select(this)">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                    <!-- RESPONSIVE MENU ICON -->
+                    <div id="icono-nav" onclick="responsiveMenu()">
+                        <i class='fa-solid fa-bars'></i>
+                    </div>
+
+                    <!-- SOCIAL NETWORKS ICONS -->
+                    <div class="networks1">
+                        <a href="https://www.linkedin.com/in/anabela-parareda-653523229/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/AnabelaParareda" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </header>
+            <div class="presentation">
+                <p class="welcome">WELCOME</p>
+                <h2>I'm <span>Anna</span>, Web Developer.</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="aboutme">
+        <img src="./img/imgme.png" alt="me">
+        <div class="aboutme">
+            <p class="section-title">About me</p>
+            <h2>Hi, i'm <span>Anna!</span></h2>
+          <p>I am 24 years old and I am from Buenos Aires, Argentina. I consider myself a resourceful and detail-oriented person. I learn quickly and can handle unexpected challenges with ease. My interest in development started several years ago, which led me to begin studying Software Development Technology at the Provincial University of Ezeiza, complemented by various online courses.</p>
+        <p>What I love about development is the ability to create amazing things through effort, creativity, and dedication. Over time, I have also expanded my skills by studying Multimedia Communication and Graphic Design, which allows me to approach projects with both technical and visual thinking.</p>
+        <p>I usually work as a freelancer and have completed projects in Front-end, some Back-end, and Digital Marketing. I’m always open to new job opportunities and collaborative challenges. I’m passionate about learning, pushing my limits, and building creative, functional solutions.</p>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="myskills">
+        <div class="container-skills" id="skills">
+            <h3 class="titulo-skills">SKILLS</h3>
+            <div class="skill">
+                <div class="info">
+                    <p>HTML</p>
+                    <span class="percentage">80%</span>
+                </div>
+
+                <div class="barra">
+                    <div id="frontend"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="info">
+                    <p>CSS</p>
+                    <span class="percentage">60%</span>
+                </div>
+
+                <div class="barra">
+                    <div id="backend"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="info">
+                    <p>Javascript</p>
+                    <span class="percentage">50%</span>
+                </div>
+
+                <div class="barra">
+                    <div id="reactjs"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="info">
+                    <p>ReactJS</p>
+                    <span class="percentage">45%</span>
+                </div>
+
+                <div class="barra">
+                    <div id="angular"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects">
+    <h2 class="title-projects">Projects</h2>
+    <div style="display: flex; flex-direction: row; justify-content: center;">
+        <div class="project">
+            <h3>Tienda Online: Tu Bazar Shop</h3>
+            <img src="img/captura_tbs.png" alt="Captura de TuBazarShop" style="max-width: 100%; height: auto;">
+            <p>Diseño y desarrollo de una tienda online en WordPress enfocada en la reventa de productos importados. El sitio incluye personalización del tema, estructura de catálogo, integración con pasarela de pagos y diseño responsive.</p>
+            <div class="link">
+                <a href="https://tubazarshop.online/" target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h3 class="section-title">Contact me</h3>
+        <div class="container-form">
+            <form id="contactForm" action="">
+                <div class="form" id="form">
+                    <input type="text" id="name" name="name" placeholder="Name" class="contact__input">
+                    <!-- <i class="contact__validacion-estado fa-light fa-circle-xmark"></i> -->
+                    <input type="email" id="email" name="email" placeholder="Email" class="contact__input">
+                </div>
+                <div class="box">
+                    <textarea type="message" id="menssage" name="message" cols="30" rows="10"
+                        placeholder="Your message.." class="input-full" style="width: 770px; height: 150px;"></textarea>
+                </div>
+                <input type="submit" value="Send" class="btn-send">
+            </form>
+        </div>
+    </section>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <p>All rights reserved - 2025</p>
+        <div class="networks2">
+            <a href="https://www.linkedin.com/in/anabela-parareda-653523229/" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/AnabelaParareda" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
